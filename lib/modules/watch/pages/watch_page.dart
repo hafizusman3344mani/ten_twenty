@@ -64,7 +64,7 @@ class _WatchPageViewState extends State<WatchPageView> {
                               childAspectRatio: 4 / 2.6),
                       itemCount: state.videos.length,
                       itemBuilder: (context, index) {
-                        VideoModel videoModel = state.videos[index];
+                        DummyVideoModel videoModel = state.videos[index];
                         return WatchVideoWidget(videoModel: videoModel);
                       }),
         );

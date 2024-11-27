@@ -3,7 +3,7 @@ import 'package:ten_twenty/constants/app_colors.dart';
 import 'package:ten_twenty/modules/home/models/home_model.dart';
 
 class VideoSearchedResultWidget extends StatelessWidget {
-  final VideoModel videoModel;
+  final DummyVideoModel videoModel;
   const VideoSearchedResultWidget({
     super.key,
     required this.videoModel,

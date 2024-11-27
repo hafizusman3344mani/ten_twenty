@@ -2,7 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:ten_twenty/modules/home/cubit/home_cubit.dart';
 import 'package:ten_twenty/modules/home/widgets/home_video_widget.dart';
+import 'package:ten_twenty/modules/movieDetail/pages/movie_detail_page.dart';
+import 'package:ten_twenty/utils/extended_context.dart';
 
+import '../../../core/di/service_locator.dart';
 import '../models/home_model.dart';
 
 class HomePage extends StatelessWidget {
@@ -11,8 +14,8 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => HomeCubit(),
-      child: HomePageView(),
+      create: (context) => HomeCubit(homeRepository: sl())..getUpcomingVideos(),
+      child: const HomePageView(),
     );
   }
 }
@@ -31,10 +34,10 @@ class _HomePageViewState extends State<HomePageView> {
       builder: (context, state) {
         return Scaffold(
           appBar: AppBar(
-            title: Text('Home'),
+            title: Text(context.localization.upcomingMovies),
           ),
           body: state.status == HomeStatus.loading
-              ? Center(
+              ? const Center(
                   child: CircularProgressIndicator(),
                 )
               : state.status == HomeStatus.error
@@ -42,17 +45,26 @@ class _HomePageViewState extends State<HomePageView> {
                       child: Text(state.errorMessage),
                     )
                   : ListView.separated(
-                      padding:
-                          EdgeInsets.symmetric(vertical: 24, horizontal: 16),
-                      itemCount: state.videos.length,
+                      padding: const EdgeInsets.symmetric(
+                          vertical: 24, horizontal: 16),
+                      itemCount: state.response.results.length,
                       separatorBuilder: (context, index) {
-                        return SizedBox(
+                        return const SizedBox(
                           height: 16,
                         );
                       },
                       itemBuilder: (context, index) {
-                        VideoModel videoModel = state.videos[index];
-                        return HomeVideoWidget(videoModel);
+                        VideoModel videoModel = state.response.results[index];
+                        return HomeVideoWidget(
+                          videoModel: videoModel,
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (_) => MovieDetailPage(
+                                        movieId: videoModel.id.toString())));
+                          },
+                        );
                       }),
         );
       },

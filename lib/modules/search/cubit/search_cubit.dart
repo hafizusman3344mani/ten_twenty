@@ -5,8 +5,8 @@ part 'search_state.dart';
 
 class SearchCubit extends Cubit<SearchState> {
   SearchCubit() : super(SearchState.initial());
-  List<VideoModel> searchedVideos = [];
-  List<VideoModel> allVideos = [];
+  List<DummyVideoModel> searchedVideos = [];
+  List<DummyVideoModel> allVideos = [];
 
   void getAllVideos() {
     allVideos = state.videos;

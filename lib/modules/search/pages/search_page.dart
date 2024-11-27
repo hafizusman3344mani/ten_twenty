@@ -86,7 +86,7 @@ class _SearchPageViewState extends State<SearchPageView> {
                                 );
                               },
                               itemBuilder: (context, index) {
-                                VideoModel videoModel = state.videos[index];
+                                DummyVideoModel videoModel = state.videos[index];
                                 return VideoSearchedResultWidget(
                                   videoModel: videoModel,
                                 );

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:ten_twenty/modules/home/models/home_model.dart';
 
 class SearchVideoWidget extends StatelessWidget {
-  final VideoModel videoModel;
+  final DummyVideoModel videoModel;
   const SearchVideoWidget( {super.key,required this.videoModel,});
 
   @override

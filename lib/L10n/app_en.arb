@@ -1,4 +1,5 @@
 {
+  "upcomingMovies": "Upcoming Movies",
   "watch": "Watch",
   "dashboard": "Dashboard",
   "mediaLibrary": "Media Library",
@@ -16,5 +17,6 @@
   "notAvailable": "Not available",
   "vip": "VIP",
   "regular": "Regular",
-  "totalPrice": "Total Price"
+  "totalPrice": "Total Price",
+  "overview": "Overview"
 }
