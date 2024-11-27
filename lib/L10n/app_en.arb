@@ -1,0 +1,20 @@
+{
+  "watch": "Watch",
+  "dashboard": "Dashboard",
+  "mediaLibrary": "Media Library",
+  "more": "More",
+  "tvShowsMoviesAndMore": "TV shows, movies and more",
+  "resultsFound": "Results Found",
+  "resultFound": "Result Found",
+  "getTickets": "Get Tickets",
+  "watchTrailer": "Watch Trailer",
+  "genres": "Genres",
+  "date": "Date",
+  "selectSeats": "Select Seats",
+  "proceedToPay": "Proceed to pay",
+  "selected": "Selected",
+  "notAvailable": "Not available",
+  "vip": "VIP",
+  "regular": "Regular",
+  "totalPrice": "Total Price"
+}
