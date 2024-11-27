@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:ten_twenty/modules/search/pages/search_page.dart';
-import 'package:ten_twenty/utils/extended_context.dart';
+import 'package:ten_twenty/utils/extensions/extended_context.dart';
 
 import '../../../widgets/search_textfield.dart';
 import '../../home/models/home_model.dart';

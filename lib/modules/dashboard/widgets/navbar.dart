@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:ten_twenty/utils/extended_context.dart';
+import 'package:ten_twenty/utils/extensions/extended_context.dart';
 
 import '../../../constants/app_colors.dart';
 import '../models/bottom_navbar_item_model.dart';

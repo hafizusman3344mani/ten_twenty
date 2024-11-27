@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:ten_twenty/modules/home/cubit/home_cubit.dart';
 import 'package:ten_twenty/modules/home/widgets/home_video_widget.dart';
 import 'package:ten_twenty/modules/movieDetail/pages/movie_detail_page.dart';
-import 'package:ten_twenty/utils/extended_context.dart';
+import 'package:ten_twenty/utils/extensions/extended_context.dart';
 
 import '../../../core/di/service_locator.dart';
 import '../models/home_model.dart';

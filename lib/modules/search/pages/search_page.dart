@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:ten_twenty/modules/home/models/home_model.dart';
 import 'package:ten_twenty/modules/search/widgets/found_result_widget.dart';
 import 'package:ten_twenty/modules/search/widgets/video_searched_result_widget.dart';
-import 'package:ten_twenty/utils/extended_context.dart';
+import 'package:ten_twenty/utils/extensions/extended_context.dart';
 
 import '../../../widgets/search_textfield.dart';
 import '../cubit/search_cubit.dart';
